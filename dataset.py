@@ -13,7 +13,7 @@ class Dataset(object):
                 transform=transforms.Compose([
                     transforms.Resize((128, 128)),
                     transforms.ToTensor()])),
-            batch_size=256,
+            batch_size=128,
             shuffle=True,
             num_workers=8)
         data_test = CIFAR10(
