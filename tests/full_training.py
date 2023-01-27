@@ -7,7 +7,7 @@ class TestFullTraining(unittest.TestCase):
         import torch.optim as optim
         from dataset import Dataset
 
-        dataset = Dataset()
+        dataset = Dataset('mnist')
         net = AlexNet(10, 1)
         criterion = nn.CrossEntropyLoss()
         optimizer = optim.Adam(net.parameters(), lr=2e-4)
